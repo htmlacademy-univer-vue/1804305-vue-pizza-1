@@ -10,6 +10,7 @@
                         <h2 class="title title--small sheet__title">Выберите тесто</h2>
 
                         <div class="sheet__content dough">
+
                             <label v-for="({ name, description }) in dough" class="dough__input"
                                 :class="{ 'dough__input--light': name === 'Тонкое', 'dough__input--large': name === 'Толстое' }">
                                 <input type="radio" name="dought" value="light" class="visually-hidden" checked>
@@ -30,6 +31,7 @@
                                 <input type="radio" name="diameter" :value="multiplierSizeMap[multiplier]"
                                     class="visually-hidden">
                                 <span>{{ name }}</span>
+
                             </label>
                         </div>
                     </div>
@@ -42,8 +44,7 @@
                         <div class="sheet__content ingredients">
 
                             <div class="ingredients__sauce">
-                                <p>Основной соус:</p>
-      
+                                <p>Основной соус:</p>      
                                 <label v-for="sauce in sauces" :key="sauce.id" 
                                     class="radio ingredients__input">
                                     <input type="radio" 
@@ -61,7 +62,6 @@
                                 <ul class="ingredients__list">
                                     <li v-for="({name}) in ingredients" class="ingredients__item">
                                         <span class="filling">{{ name }}</span>
-
                                         <div class="counter counter--orange ingredients__counter">
                                             <button type="button" class="counter__button counter__button--minus"
                                                 disabled>
@@ -73,11 +73,8 @@
                                             </button>
                                         </div>
                                     </li>
-                                    
                                 </ul>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -116,6 +113,6 @@ import dough from '../mocks/dough.json';
 import sizes from '../mocks/sizes.json';
 import ingredients from '../mocks/ingredients.json';
 
-
 const multiplierSizeMap = { 1: "small", 2: "normal", 3: "big" };
 </script>
+
