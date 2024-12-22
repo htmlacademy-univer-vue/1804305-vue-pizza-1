@@ -114,5 +114,15 @@ import sizes from '../mocks/sizes.json';
 import ingredients from '../mocks/ingredients.json';
 
 const multiplierSizeMap = { 1: "small", 2: "normal", 3: "big" };
+
+
+const str = "filling/mushrooms.svg";
+const parts = str.split('/');
+const fileName = parts[1].slice(0, parts[1].lastIndexOf('.'));
 </script>
 
+
+<style lang="scss" scoped>
+    @import '@/assets/scss/fonts.scss';
+    @import '@/assets/scss/style.scss';
+</style>
